@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#pagescroll{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.section{
+    height: 100vh;
+    width: 100%;
+    transition: transform 0.3s ease-out;
+}
+.controllers{
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#control-up,
+#control-down {
+    cursor: pointer;
+    margin: 5px;
+    transform: scale(0.5);
+    transition: 0.2s;
+}
+
+#control-down{
+    transform: rotate(180deg)  scale(0.5);
+}
+#control-down:hover{
+    transform: rotate(180deg)  scale(0.7);
+}
+#control-up:hover{
+    transform: scale(0.7);
+}
