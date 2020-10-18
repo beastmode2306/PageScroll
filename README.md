@@ -43,6 +43,20 @@ In terms of use PageScroll you will heed to have this structure of your HTML fil
 
 The class `section` of slide is strongly required.
 
+If you want to integrate library with your navbar, pass option `nav` with selectors to object as it shown below.
+```javascript
+new PageScroll('#pagescroll', {
+    nav: [
+        document.getElementById('home-link'), // represents first section
+        document.getElementById('about-link'), // represents second section
+        document.getElementById('services-link'), // represents third section
+        document.getElementById('pricings-link'), // represents fourth section
+        document.getElementById('contacts-link') // represents fifth section
+    ]
+})
+```
+
+PageScroll will add a class `active-link` to link, which is connected to current section. Class will be added automatically as you scroll or click on some of the links.
 #### Initialization
 
 You can init PageScroll just after you import it to your project.
@@ -63,13 +77,23 @@ Options that available in this version:
 |--- |--- |
 |animDuration| Controls the duration of changing the scene. _Default `300ms`_|
 |easing| Controls the easing of animation. _Default `linear`_|
+|controlColor| Sets the color of the control arrows at the right of the screen. _Default `#fff`_|
+|nav| Array of selectors that represents each of the link. Usually used when you have links in navbar which are connected with seperate sections. *Important to know that selectors in passed array should have the same orders as it goes in your navbar.*  _No default values_| 
 
 **Examples**
 
 ```javascript
 new PageScroll('#pagescroll', {
     animDuration: 2000, // 2 seconds
-    easing: 'cubic-bezier(.17,.67,.83,.67)' //animation easing
+    easing: 'cubic-bezier(.17,.67,.83,.67)', //animation easing
+    controlColor: '#ccc', // color of navigation arrows
+    nav: [
+        document.getElementById('home-link'),
+        document.getElementById('about-link'),
+        document.getElementById('services-link'),
+        document.getElementById('pricings-link'),
+        document.getElementById('contacts-link')
+    ] // array of links selectors
 })
 ```
 
