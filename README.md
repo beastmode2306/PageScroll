@@ -78,7 +78,7 @@ Options that available in this version:
 |animDuration| Controls the duration of changing the scene. _Default `300ms`_|
 |easing| Controls the easing of animation. _Default `linear`_|
 |controlColor| Sets the color of the control arrows at the right of the screen. _Default `#fff`_|
-|nav| Array of selectors that represents each of the link. Usually used when you have links in navbar which are connected with seperate sections. *Important to know that selectors in passed array should have the same orders as it goes in your navbar.*  _No default values_| 
+|nav| Array of selectors that represents each of the link. Usually used when you have links in navbar which are connected with seperate sections. *Important to know that selectors in passed array should be in the same order as it goes in your navbar.*  _No default values_| 
 
 **Examples**
 
